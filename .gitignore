@@ -1,0 +1,14 @@
+task-manager/.metadata/
+# Ignore Eclipse metadata folder
+task-manager/.metadata/
+
+# Ignore Java class files
+*.class
+
+# Ignore build directories
+bin/
+target/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
