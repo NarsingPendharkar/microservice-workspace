@@ -42,8 +42,5 @@ public class GlobalExceptionHandler {
 				ApiResponse.error(message, status.value(), request.getRequestURI(), UUID.randomUUID().toString()));
 	}
 
-	private void sysout() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }
