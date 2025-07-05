@@ -12,3 +12,6 @@ target/
 # Ignore OS-specific files
 .DS_Store
 Thumbs.db
+# In .gitignore
+task-manager/task-user/data/
+task-manager/task-user/logs/
