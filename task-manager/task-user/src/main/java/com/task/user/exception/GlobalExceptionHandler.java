@@ -1,18 +1,16 @@
 package com.task.user.exception;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
+import com.task.user.dto.UserConstants;
 import com.task.user.util.ApiResponse;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,14 +24,14 @@ public class GlobalExceptionHandler {
 		Map<String, Object> body = new HashMap<>();
 		String trace = (String) request.getAttribute("traceId");
 		ex.getBindingResult().getFieldErrors().forEach(error -> body.put(error.getField(), error.getDefaultMessage()));
-		ApiResponse<Map<String, String>> res = ApiResponse.error("Validation failed", HttpStatus.BAD_REQUEST.value(),
+		ApiResponse<Map<String, String>> res = ApiResponse.error(UserConstants.VALIDATION_FAILED, HttpStatus.BAD_REQUEST.value(),
 				request.getRequestURI(), trace);
 		return ResponseEntity.badRequest().body(res);
 	}
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<ApiResponse<Object>> handleAllExceptions(Exception ex, HttpServletRequest request) {
-		return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Internal server error", request);
+		return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, UserConstants.INTERNAL_SERVER_ERROR, request);
 	}
 
 	private ResponseEntity<ApiResponse<Object>> buildErrorResponse(HttpStatus status, String message,

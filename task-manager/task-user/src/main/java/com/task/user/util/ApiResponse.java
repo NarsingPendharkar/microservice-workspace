@@ -14,8 +14,6 @@ public class ApiResponse<T> {
     private LocalDateTime timestamp;
     private T data;
     
-    
-    
 	public ApiResponse(boolean success, String message, int status, String traceId, String path, T data) {
 		super();
 		this.success = success;

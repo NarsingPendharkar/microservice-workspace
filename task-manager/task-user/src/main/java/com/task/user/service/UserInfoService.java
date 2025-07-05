@@ -1,13 +1,13 @@
 package com.task.user.service;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.task.user.dao.UserInfoRepository;
 import com.task.user.entity.UserInfo;
+import com.task.user.exception.UserNotFoundException;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
@@ -29,13 +29,13 @@ public class UserInfoService {
     }
 
     // ✅ Get user by ID
-    public UserInfo getUserById(UUID id) {
+    public UserInfo getUserById(Long id) {
         return userInfoRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("User with ID " + id + " not found"));
+                .orElseThrow(() -> new UserNotFoundException("User with ID " + id + " not found"));
     }
 
     // ✅ Update user
-    public UserInfo updateUser(UUID id, @Valid UserInfo updatedUser) {
+    public UserInfo updateUser(Long id, @Valid UserInfo updatedUser) {
         UserInfo existingUser = getUserById(id);
 
         existingUser.setUsername(updatedUser.getUsername());
@@ -47,9 +47,9 @@ public class UserInfoService {
     }
 
     // ✅ Delete user
-    public void deleteUser(UUID id) {
+    public void deleteUser(Long id) {
         if (!userInfoRepository.existsById(id)) {
-            throw new EntityNotFoundException("User with ID " + id + " not found");
+            throw new UserNotFoundException("User with ID " + id + " not found");
         }
         userInfoRepository.deleteById(id);
     }
