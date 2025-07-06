@@ -1,0 +1,235 @@
+2025-07-06T19:45:37.519+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:45:37.520+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:45:37.560+05:30  INFO 17648 --- [task-tasks] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-06T19:45:37.561+05:30  INFO 17648 --- [task-tasks] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-06T19:45:38.427+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:45:38.815+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:45:38.830+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:45:38.831+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:45:38.886+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:45:38.887+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1326 ms
+2025-07-06T19:45:39.763+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:45:39.821+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:45:39.866+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:45:39.914+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:45:39.943+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:45:39.945+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:45:39.947+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811339946 with initial instances count: 0
+2025-07-06T19:45:39.952+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:45:39.974+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:45:39.976+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:45:39.986+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 2.989 seconds (process running for 3.964)
+2025-07-06T19:47:07.342+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-06T19:47:07.348+05:30  INFO 17648 --- [task-tasks] [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:07.354+05:30  INFO 17648 --- [task-tasks] [Thread-6] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:07.368+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:07.381+05:30  INFO 17648 --- [task-tasks] [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:07.382+05:30  INFO 17648 --- [task-tasks] [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:07.513+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:07.513+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:07.720+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:07.777+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:07.777+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:07.778+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:07.799+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:07.800+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 285 ms
+2025-07-06T19:47:07.911+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:07.951+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:07.971+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:08.036+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:08.039+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:08.039+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:08.039+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811428039 with initial instances count: 0
+2025-07-06T19:47:08.042+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:08.051+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:08.052+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:08.064+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.595 seconds (process running for 92.042)
+2025-07-06T19:47:08.067+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:19.378+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-06T19:47:19.381+05:30  INFO 17648 --- [task-tasks] [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:19.382+05:30  INFO 17648 --- [task-tasks] [Thread-9] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:19.391+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:19.398+05:30  INFO 17648 --- [task-tasks] [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:19.398+05:30  INFO 17648 --- [task-tasks] [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:19.502+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:19.504+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:19.751+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:19.840+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:19.843+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:19.844+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:19.879+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:19.881+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 372 ms
+2025-07-06T19:47:20.074+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:20.101+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:20.113+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:20.129+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:20.131+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:20.131+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:20.132+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811440132 with initial instances count: 0
+2025-07-06T19:47:20.132+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:20.136+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:20.137+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:20.143+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.688 seconds (process running for 104.121)
+2025-07-06T19:47:20.145+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:25.500+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:25.501+05:30  INFO 17648 --- [task-tasks] [Thread-15] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:25.501+05:30  INFO 17648 --- [task-tasks] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:25.504+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:25.507+05:30  INFO 17648 --- [task-tasks] [Thread-15] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:25.507+05:30  INFO 17648 --- [task-tasks] [Thread-15] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:25.570+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:25.570+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:25.749+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:25.789+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:25.790+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:25.791+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:25.819+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:25.819+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 248 ms
+2025-07-06T19:47:25.898+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:25.917+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:25.925+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:25.936+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:25.937+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:25.938+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:25.938+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811445938 with initial instances count: 0
+2025-07-06T19:47:25.938+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:25.942+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:25.943+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:25.948+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.404 seconds (process running for 109.926)
+2025-07-06T19:47:25.949+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:29.319+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:29.320+05:30  INFO 17648 --- [task-tasks] [Thread-21] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:29.320+05:30  INFO 17648 --- [task-tasks] [Thread-21] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:29.325+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:29.328+05:30  INFO 17648 --- [task-tasks] [Thread-21] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:29.328+05:30  INFO 17648 --- [task-tasks] [Thread-21] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:29.399+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:29.399+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:29.578+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:29.619+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:29.620+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:29.620+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:29.643+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:29.643+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 242 ms
+2025-07-06T19:47:29.724+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:29.744+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:29.752+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:29.764+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:29.766+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:29.766+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:29.766+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811449766 with initial instances count: 0
+2025-07-06T19:47:29.767+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:29.771+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:29.771+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:29.778+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.408 seconds (process running for 113.755)
+2025-07-06T19:47:29.778+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:38.188+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-06T19:47:38.192+05:30  INFO 17648 --- [task-tasks] [Thread-27] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:38.194+05:30  INFO 17648 --- [task-tasks] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:38.205+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:38.213+05:30  INFO 17648 --- [task-tasks] [Thread-27] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:38.214+05:30  INFO 17648 --- [task-tasks] [Thread-27] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:38.286+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:38.287+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:38.472+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:38.512+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:38.513+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:38.513+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:38.533+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:38.533+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 244 ms
+2025-07-06T19:47:38.611+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:38.630+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:38.641+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:38.655+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:38.658+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:38.658+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:38.658+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811458658 with initial instances count: 0
+2025-07-06T19:47:38.659+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:38.662+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:38.662+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:38.669+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.408 seconds (process running for 122.646)
+2025-07-06T19:47:38.670+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:44.157+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:44.159+05:30  INFO 17648 --- [task-tasks] [Thread-33] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:44.160+05:30  INFO 17648 --- [task-tasks] [Thread-33] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:44.163+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:44.166+05:30  INFO 17648 --- [task-tasks] [Thread-33] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:44.166+05:30  INFO 17648 --- [task-tasks] [Thread-33] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:44.259+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:44.260+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:44.449+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:44.487+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:44.488+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:44.488+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:44.511+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:44.511+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 249 ms
+2025-07-06T19:47:44.605+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:44.631+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:44.642+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:44.655+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:44.659+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:44.659+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:44.659+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811464659 with initial instances count: 0
+2025-07-06T19:47:44.660+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:44.666+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:44.666+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:44.675+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.46 seconds (process running for 128.653)
+2025-07-06T19:47:44.677+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:49.072+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:49.074+05:30  INFO 17648 --- [task-tasks] [Thread-39] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:49.076+05:30  INFO 17648 --- [task-tasks] [Thread-39] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:49.081+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:49.086+05:30  INFO 17648 --- [task-tasks] [Thread-39] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:49.086+05:30  INFO 17648 --- [task-tasks] [Thread-39] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:49.155+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:49.155+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:49.327+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:49.376+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:49.377+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:49.378+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:49.404+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:49.405+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 246 ms
+2025-07-06T19:47:49.492+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:49.514+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:49.523+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:49.536+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:49.537+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:49.538+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:49.538+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811469538 with initial instances count: 0
+2025-07-06T19:47:49.538+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:49.543+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:49.544+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:49.548+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.42 seconds (process running for 133.526)
+2025-07-06T19:47:49.550+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:50.913+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:50.915+05:30  INFO 17648 --- [task-tasks] [Thread-45] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:50.917+05:30  INFO 17648 --- [task-tasks] [Thread-45] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:50.928+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:50.933+05:30  INFO 17648 --- [task-tasks] [Thread-45] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:50.934+05:30  INFO 17648 --- [task-tasks] [Thread-45] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:51.006+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:51.007+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:51.188+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ea8ae19-ca60-3ae9-bf28-d0453c01cd48
+2025-07-06T19:47:51.227+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:51.228+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:51.228+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:51.249+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:51.250+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 240 ms
+2025-07-06T19:47:51.326+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:51.344+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:51.354+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:51.365+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:51.366+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:51.366+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:51.366+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811471366 with initial instances count: 0
+2025-07-06T19:47:51.367+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:51.370+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:51.371+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:51.378+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.399 seconds (process running for 135.356)
+2025-07-06T19:47:51.379+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-06T19:47:55.789+05:30  INFO 17648 --- [task-tasks] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-06T19:47:55.792+05:30  INFO 17648 --- [task-tasks] [Thread-51] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TASK-TASKS with eureka with status DOWN
+2025-07-06T19:47:55.794+05:30  INFO 17648 --- [task-tasks] [Thread-51] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-06T19:47:55.803+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-06T19:47:55.811+05:30  INFO 17648 --- [task-tasks] [Thread-51] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-06T19:47:55.811+05:30  INFO 17648 --- [task-tasks] [Thread-51] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
