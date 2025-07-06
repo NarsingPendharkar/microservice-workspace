@@ -1,7 +1,6 @@
 package com.task.user.controller;
 
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,6 @@ import com.task.user.service.UserInfoService;
 import com.task.user.util.ApiResponse;
 import com.task.user.util.TraceIdUtil;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
 @RestController

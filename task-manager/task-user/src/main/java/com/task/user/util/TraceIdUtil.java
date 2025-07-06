@@ -7,6 +7,10 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class TraceIdUtil {
 	
+	private TraceIdUtil() {
+		
+	}
+	
 	public static String getTraceId() {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         if (attributes == null) return null;

@@ -2,21 +2,23 @@ package com.task.user.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.task.user.dao.UserInfoRepository;
 import com.task.user.entity.UserInfo;
 import com.task.user.exception.UserNotFoundException;
 
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 
 @Service
 public class UserInfoService {
 
-    @Autowired
-    private UserInfoRepository userInfoRepository;
+    
+    private final UserInfoRepository userInfoRepository;
+    
+    public UserInfoService(UserInfoRepository userInfoRepository) {
+    	this.userInfoRepository=userInfoRepository;
+    }
 
     // ✅ Create new user
     public UserInfo createUser(@Valid UserInfo user) {
