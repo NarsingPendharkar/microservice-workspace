@@ -16,3 +16,5 @@ Thumbs.db
 task-manager/task-user/data/
 task-manager/task-user/logs/
 .sonarlint/
+#igonre log files
+*.log

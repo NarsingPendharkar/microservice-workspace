@@ -233,3 +233,23 @@
 2025-07-06T19:47:55.803+05:30  INFO 17648 --- [task-tasks] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
 2025-07-06T19:47:55.811+05:30  INFO 17648 --- [task-tasks] [Thread-51] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
 2025-07-06T19:47:55.811+05:30  INFO 17648 --- [task-tasks] [Thread-51] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-06T19:47:55.893+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Starting TaskTasksApplication using Java 21.0.7 with PID 17648 (E:\microservice-workspace\task-manager\task-tasks\target\classes started by narsing in E:\microservice-workspace\task-manager\task-tasks)
+2025-07-06T19:47:55.893+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-07-06T19:47:56.059+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1103e1c3-4394-3aa1-b6e1-b603a84c1424
+2025-07-06T19:47:56.100+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-06T19:47:56.101+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-06T19:47:56.101+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-06T19:47:56.122+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-06T19:47:56.122+05:30  INFO 17648 --- [task-tasks] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2025-07-06T19:47:56.197+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-06T19:47:56.217+05:30  INFO 17648 --- [task-tasks] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-06T19:47:56.226+05:30  WARN 17648 --- [task-tasks] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-06T19:47:56.237+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-06T19:47:56.238+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-06T19:47:56.238+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-07-06T19:47:56.238+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1751811476238 with initial instances count: 0
+2025-07-06T19:47:56.238+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TASK-TASKS with eureka with status UP
+2025-07-06T19:47:56.243+05:30  INFO 17648 --- [task-tasks] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-06T19:47:56.244+05:30  INFO 17648 --- [task-tasks] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-07-06T19:47:56.249+05:30  INFO 17648 --- [task-tasks] [restartedMain] com.task.tasks.TaskTasksApplication      : Started TaskTasksApplication in 0.381 seconds (process running for 140.227)
+2025-07-06T19:47:56.250+05:30  INFO 17648 --- [task-tasks] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
