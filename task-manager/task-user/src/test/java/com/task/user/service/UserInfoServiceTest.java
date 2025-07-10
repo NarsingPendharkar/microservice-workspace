@@ -1,25 +1,50 @@
 package com.task.user.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.task.user.dao.UserInfoRepositoryTest;
+import com.task.user.dao.UserInfoRepository;
 import com.task.user.entity.UserInfo;
 import com.task.user.exception.UserNotFoundException;
 
 import jakarta.validation.Valid;
 
-@Service
+
+@ExtendWith(MockitoExtension.class)
 public class UserInfoServiceTest {
 
-    @Autowired
-    private UserInfoRepositoryTest userInfoRepository;
+	@Mock
+	private UserInfoRepository userInfoRepository;
 
+	@InjectMocks
+	private UserInfoService userInfoService;
+    
+    private UserInfo user;
+    
+    @BeforeEach
+    public void setUp() {
+        user = new UserInfo();
+        user.setId(1L);
+        user.setUsername("testuser");
+        user.setEmail("test@example.com");
+        user.setAge(25);
+        user.setPassword("password123");
+    }
     // ✅ Create new user
-    public UserInfo createUser(@Valid UserInfo user) {
-        return userInfoRepository.save(user);
+    @Test
+    public void testCreateUser() {
+        when(userInfoRepository.save(user)).thenReturn(user);
+        UserInfo result = userInfoService.createUser(user);
+        assertEquals(user, result);
     }
 
     // ✅ Get all users

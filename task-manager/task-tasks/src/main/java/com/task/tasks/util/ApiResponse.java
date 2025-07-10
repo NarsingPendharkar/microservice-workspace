@@ -1,34 +1,38 @@
 package com.task.tasks.util;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 import lombok.Data;
 
 @Data
 public class ApiResponse<T> {
-	private final Instant timestamp;
-    private final int status;
-    private final String message;
-    private final String path;
-    private final String error;
-    private final T data;
-
-    private ApiResponse(T data, int status, String message, String path, String error) {
-        this.timestamp = Instant.now();
-        this.status = status;
-        this.message = message;
-        this.path = path;
-        this.error = error;
-        this.data = data;
+    private boolean success;
+    private String message;
+    private int status;
+    private String traceId;
+    private String path;
+    private LocalDateTime timestamp;
+    private T data;
+    
+	public ApiResponse(boolean success, String message, int status, String traceId, String path, T data) {
+		super();
+		this.success = success;
+		this.message = message;
+		this.status = status;
+		this.traceId = traceId;
+		this.path = path;
+		this.timestamp = LocalDateTime.now();
+		this.data = data;
+	}
+	
+	public static <T> ApiResponse<T> success(String message, T data, int status, String path, String traceId) {
+        return new ApiResponse<>(true, message, status, traceId, path, data);
     }
 
-    public static <T> ApiResponse<T> success(T data, String message, String path) {
-        return new ApiResponse<>(data, 200, message, path, null);
+    public static <T> ApiResponse<T> error(String message, int status, String path, String traceId) {
+        return new ApiResponse<>(false, message, status, traceId, path, null);
     }
-
-    public static <T> ApiResponse<T> error(String message, String path, String error, int status) {
-        return new ApiResponse<>(null, status, message, path, error);
-    }
-
+    
+    
 
 }

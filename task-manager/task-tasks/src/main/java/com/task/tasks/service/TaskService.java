@@ -23,10 +23,9 @@ public class TaskService {
 	}
 	public Tasks updateTask(Long taskId, @Valid Tasks task) {
 		if (taskRepository.existsById(taskId)) {
-			task.setId(taskId);
 			return taskRepository.save(task);
 		}
-		return null; // or throw an exception
+		return null; 
 	}
 	public boolean deleteTask(Long taskId) {
 		if (taskRepository.existsById(taskId)) {
