@@ -1,9 +1,13 @@
-package org.ecom.userms.dao;
+/*
+ * 
+ */
+package org.ecom.userms.service;
 
 
 import java.util.List;
 import java.util.Optional;
 
+import org.ecom.userms.dao.UserRepository;
 import org.ecom.userms.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

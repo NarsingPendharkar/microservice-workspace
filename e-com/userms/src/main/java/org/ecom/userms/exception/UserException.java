@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package org.ecom.userms.exception;
 
 import java.util.HashMap;

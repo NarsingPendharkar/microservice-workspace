@@ -1,4 +1,7 @@
-package org.ecom.userms.dao;
+/*
+ * 
+ */
+package org.ecom.userms.service;
 
 
 import java.util.List;
