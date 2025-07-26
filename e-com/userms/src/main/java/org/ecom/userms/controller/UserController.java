@@ -10,7 +10,6 @@ import java.util.Optional;
 import org.ecom.userms.config.UserConfig;
 import org.ecom.userms.model.User;
 import org.ecom.userms.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,23 +23,25 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/api/users")
+@RequiredArgsConstructor
 public class UserController {
 
-	@Autowired
-	private  UserConfig userConfig;
-	@Autowired
+	
+	private final UserConfig userConfig;
+	
 
-	private  UserService userService;
-	@Autowired
+	private final UserService userService;
+	
 
-	private  WebClient webClient;
-	@Autowired
+	private final WebClient webClient;
+	
 
-	private  ObjectMapper mapper;
+	private final ObjectMapper mapper;
 
 //     Create new user
 	@PostMapping
@@ -71,7 +72,11 @@ public class UserController {
 
 	@GetMapping("/externalapi")
 	public Flux<User> mapUser1() {
-		return webClient.get().uri("https://dummyjson.com/users").retrieve().bodyToMono(String.class)
+		return webClient
+				.get()
+				.uri("https://dummyjson.com/users")
+				.retrieve()
+				.bodyToMono(String.class)
 				.doOnNext(json -> System.out.println("Received data: " + json)) // ✅ console log
 				.flatMapMany(json -> {
 					try {
