@@ -1,4 +1,4 @@
-package org.ecom.productms.model;
+package com.cachedemo.model;
 
 import java.io.Serializable;
 
