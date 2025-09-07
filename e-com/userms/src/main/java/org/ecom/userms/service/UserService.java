@@ -9,7 +9,7 @@ import java.util.Optional;
 
 import org.ecom.userms.model.User;
 
-public interface UserService {
+public interface UserService  {
     User saveUser(User user);
     List<User> getAllUsers();
     Optional<User> getUserById(Long id);

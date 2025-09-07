@@ -14,24 +14,21 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProductService {
 
-    private final GlobalExceptionHandler globalExceptionHandler;
-	
-	private final ProductRepository repository;
+
+	private ProductRepository repository;
 
 	// save
-	
-    public Product saveProduct(Product product) {
-        return repository.save(product);
-    }
-    public List<Product> getAllProducts() {
-        return repository.findAll();
-    }
-    
-    public Optional<Product> getProductById(Long id) {
-        return repository.findById(id);
-    }
 
-    
- 
+	public Product saveProduct(Product product) {
+		return repository.save(product);
+	}
+
+	public List<Product> getAllProducts() {
+		return repository.findAll();
+	}
+
+	public Optional<Product> getProductById(Long id) {
+		return repository.findById(id);
+	}
 
 }

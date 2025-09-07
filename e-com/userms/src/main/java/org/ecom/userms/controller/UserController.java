@@ -3,50 +3,43 @@
  */
 package org.ecom.userms.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.ecom.userms.config.UserConfig;
 import org.ecom.userms.model.User;
 import org.ecom.userms.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.reactive.function.client.WebClient;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
-import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("/api/users")
-@RequiredArgsConstructor
+@RequestMapping("/api")
 public class UserController {
 
 	
-	private final UserConfig userConfig;
-	
+	@Autowired
+	private  UserService userService;
 
-	private final UserService userService;
-	
-
-	private final WebClient webClient;
-	
-
-	private final ObjectMapper mapper;
 
 //     Create new user
-	@PostMapping
+	@PostMapping("/register")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 		return ResponseEntity.ok(userService.saveUser(user));
+	}
+	
+	@GetMapping("/user/home")
+	public String home() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		return "welcome "+authentication.getName() +"to home page";
 	}
 
 	// Get all users
@@ -70,34 +63,6 @@ public class UserController {
 	}
 
 
-	@GetMapping("/externalapi")
-	public Flux<User> mapUser1() {
-		return webClient
-				.get()
-				.uri("https://dummyjson.com/users")
-				.retrieve()
-				.bodyToMono(String.class)
-				.doOnNext(json -> System.out.println("Received data: " + json)) // ✅ console log
-				.flatMapMany(json -> {
-					try {
-						JsonNode root = mapper.readTree(json);
-						JsonNode usersArray = root.get("users");
-
-						List<User> users = new ArrayList<>();
-						for (JsonNode node : usersArray) {
-							User user = new User();
-							user.setName(node.get("username").asText());
-							user.setEmail(node.get("email").asText());
-							user.setPassword(node.get("password").asText());
-							user.setRole(node.get("role").asText());
-							users.add(user);
-						}
-
-						return Flux.fromIterable(users); // ✅ returns list to Postman
-					} catch (Exception e) {
-						return Flux.error(e);
-					}
-				});
-	}
+	
 
 }
