@@ -2,7 +2,6 @@ package org.school.studentms.feignClient;
 
 import org.school.studentms.dto.AddressDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 //use this with eureka server
-//@FeignClient(value = "ADDRESS-SERVICE", path = "/api/address")
+//@FeignClient(value = "ADDRESSMS", path = "/api/addresses")
 
 //below used when we are not using eureka server
 @FeignClient(

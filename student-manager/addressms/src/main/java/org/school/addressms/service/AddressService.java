@@ -2,12 +2,12 @@ package org.school.addressms.service;
 
 import java.util.List;
 
-import org.school.addressms.entity.AddressDTO;
+import org.school.addressms.entity.Address;
 
 public interface AddressService {
-    AddressDTO createAddress(AddressDTO dto);
-    AddressDTO getAddressById(Long id);
-    List<AddressDTO> getAllAddresses();
-    AddressDTO updateAddress(Long id, AddressDTO dto);
+    Address createAddress(Address dto);
+    Address getAddressById(Long id);
+    List<Address> getAllAddresses();
+    Address updateAddress(Long id, Address dto);
     void deleteAddress(Long id);
 }

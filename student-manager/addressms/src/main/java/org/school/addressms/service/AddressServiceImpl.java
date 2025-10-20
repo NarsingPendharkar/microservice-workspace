@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.school.addressms.entity.Address;
-import org.school.addressms.entity.AddressDTO;
 import org.school.addressms.exception.ResourceNotFoundException;
 import org.school.addressms.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,21 +17,21 @@ public class AddressServiceImpl implements AddressService {
     private AddressRepository repository;
 
     @Override
-    public AddressDTO createAddress(AddressDTO dto) {
+    public Address createAddress(Address dto) {
         Address address = mapToEntity(dto);
         Address saved = repository.save(address);
         return mapToDTO(saved);
     }
 
     @Override
-    public AddressDTO getAddressById(Long id) {
+    public Address getAddressById(Long id) {
         Address address = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Address not found with id: " + id));
         return mapToDTO(address);
     }
 
     @Override
-    public List<AddressDTO> getAllAddresses() {
+    public List<Address> getAllAddresses() {
         return repository.findAll()
                 .stream()
                 .map(this::mapToDTO)
@@ -40,7 +39,7 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public AddressDTO updateAddress(Long id, AddressDTO dto) {
+    public Address updateAddress(Long id, Address dto) {
         Address existing = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Address not found with id: " + id));
 
@@ -49,6 +48,7 @@ public class AddressServiceImpl implements AddressService {
         existing.setState(dto.getState());
         existing.setCountry(dto.getCountry());
         existing.setZipCode(dto.getZipCode());
+        existing.setStudentId(dto.getStudentId());
 
         Address updated = repository.save(existing);
         return mapToDTO(updated);
@@ -62,7 +62,7 @@ public class AddressServiceImpl implements AddressService {
     }
 
     // Utility Mappers
-    private Address mapToEntity(AddressDTO dto) {
+    private Address mapToEntity(Address dto) {
         return Address.builder()
                 .id(dto.getId())
                 .street(dto.getStreet())
@@ -70,17 +70,19 @@ public class AddressServiceImpl implements AddressService {
                 .state(dto.getState())
                 .country(dto.getCountry())
                 .zipCode(dto.getZipCode())
+                .studentId(dto.getStudentId())
                 .build();
     }
 
-    private AddressDTO mapToDTO(Address entity) {
-        return AddressDTO.builder()
+    private Address mapToDTO(Address entity) {
+        return Address.builder()
                 .id(entity.getId())
                 .street(entity.getStreet())
                 .city(entity.getCity())
                 .state(entity.getState())
                 .country(entity.getCountry())
                 .zipCode(entity.getZipCode())
+                .studentId(entity.getStudentId())
                 .build();
     }
 }

@@ -1,0 +1,95 @@
+
+
+# ================================
+# 🔗 Eureka Client Configuration
+# ================================
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# ================================
+# 🌉 Spring Cloud Gateway Routes
+# ================================
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            # ----------------------------
+            # 🎓 Student Microservice Route
+            # ----------------------------
+            - id: studentms
+              uri: lb://studentms
+              predicates:
+                - Path=/api/students/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    name: studentCircuitBreaker
+                    fallbackUri: forward:/studentFallback
+
+            # ----------------------------
+            # 🏠 Address Microservice Route
+            # ----------------------------
+            - id: addressms
+              uri: lb://addressms
+              predicates:
+                - Path=/api/addresses/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    name: addressCircuitBreaker
+                    fallbackUri: forward:/addressFallback
+
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+# ================================
+# 🧠 Resilience4j Circuit Breaker Settings
+# ================================
+resilience4j:
+  circuitbreaker:
+    instances:
+      studentCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 3
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+
+      addressCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 3
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+
+# ================================
+# 🩺 Actuator Monitoring (optional)
+# ================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+# ================================
+# 🧾 Logging Configuration
+# ================================
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

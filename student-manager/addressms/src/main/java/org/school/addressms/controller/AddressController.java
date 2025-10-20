@@ -3,7 +3,7 @@ package org.school.addressms.controller;
 
 import java.util.List;
 
-import org.school.addressms.entity.AddressDTO;
+import org.school.addressms.entity.Address;
 import org.school.addressms.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,22 +24,23 @@ public class AddressController {
     private AddressService service;
 
     @PostMapping
-    public ResponseEntity<AddressDTO> create(@RequestBody AddressDTO dto) {
+    public ResponseEntity<Address> create(@RequestBody Address dto) {
+    	System.out.println(dto);
         return ResponseEntity.ok(service.createAddress(dto));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AddressDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<Address> getById(@PathVariable Long id) {
         return ResponseEntity.ok(service.getAddressById(id));
     }
 
     @GetMapping
-    public ResponseEntity<List<AddressDTO>> getAll() {
+    public ResponseEntity<List<Address>> getAll() {
         return ResponseEntity.ok(service.getAllAddresses());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AddressDTO> update(@PathVariable Long id, @RequestBody AddressDTO dto) {
+    public ResponseEntity<Address> update(@PathVariable Long id, @RequestBody Address dto) {
         return ResponseEntity.ok(service.updateAddress(id, dto));
     }
 
