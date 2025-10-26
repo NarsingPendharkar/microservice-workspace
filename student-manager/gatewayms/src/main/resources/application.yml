@@ -1,5 +1,3 @@
-
-
 # ================================
 # 🔗 Eureka Client Configuration
 # ================================
@@ -14,41 +12,40 @@ eureka:
 # 🌉 Spring Cloud Gateway Routes
 # ================================
 spring:
+  application:
+    name: api-gateway
   cloud:
     gateway:
-      server:
-        webflux:
-          routes:
-            # ----------------------------
-            # 🎓 Student Microservice Route
-            # ----------------------------
-            - id: studentms
-              uri: lb://studentms
-              predicates:
-                - Path=/api/students/**
-              filters:
-                - name: CircuitBreaker
-                  args:
-                    name: studentCircuitBreaker
-                    fallbackUri: forward:/studentFallback
-
-            # ----------------------------
-            # 🏠 Address Microservice Route
-            # ----------------------------
-            - id: addressms
-              uri: lb://addressms
-              predicates:
-                - Path=/api/addresses/**
-              filters:
-                - name: CircuitBreaker
-                  args:
-                    name: addressCircuitBreaker
-                    fallbackUri: forward:/addressFallback
-
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        # ----------------------------
+        # 🎓 Student Microservice Route
+        # ----------------------------
+        - id: studentms
+          uri: lb://studentms
+          predicates:
+            - Path=/api/students/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: studentCircuitBreaker
+                fallbackUri: forward:/studentFallback
+
+        # ----------------------------
+        # 🏠 Address Microservice Route
+        # ----------------------------
+        - id: addressms
+          uri: lb://addressms
+          predicates:
+            - Path=/api/addresses/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: addressCircuitBreaker
+                fallbackUri: forward:/addressFallback
 
 # ================================
 # 🧠 Resilience4j Circuit Breaker Settings
@@ -63,7 +60,6 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 2
-
       addressCircuitBreaker:
         registerHealthIndicator: true
         slidingWindowSize: 5
@@ -73,16 +69,26 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 2
 
 # ================================
-# 🩺 Actuator Monitoring (optional)
+# 🩺 Actuator Monitoring
 # ================================
 management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: "*"
   endpoint:
     health:
       show-details: always
+
+# ================================
+# 🔗 Sleuth & Zipkin Tracing
+# ================================
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
 
 # ================================
 # 🧾 Logging Configuration
@@ -93,3 +99,4 @@ logging:
     org.springframework.cloud.gateway: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    level: "%5p [${spring.application.name:},traceId=%X{traceId:-},spanId=%X{spanId:-}]"
