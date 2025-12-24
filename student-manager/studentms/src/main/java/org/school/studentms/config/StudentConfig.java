@@ -10,33 +10,32 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class StudentConfig {
-	 String addressUrl = "http://localhost:8081/api/addresses" ;
+
+	String addressUrl = "http://localhost:8081/api/addresses";
+
 	@Bean
 	public RestTemplate getTemplate() {
 		return new RestTemplate();
 	}
-	
+
 	@Bean
-    public WebClient webClient() {
-        return WebClient.builder()
-                .baseUrl(addressUrl)
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .build();
-    }
-	
-	   // ✅ For RestTemplate (Load-balanced for Eureka)
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+	public WebClient webClient() {
+		return WebClient.builder().baseUrl(addressUrl)
+				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
+	}
 
-    // ✅ For WebClient (Load-balanced for Eureka)
-    @Bean
-    @LoadBalanced
-    public WebClient.Builder webClientBuilder() {
-        return WebClient.builder();
-    }
+	// ✅ For RestTemplate (Load-balanced for Eureka)
+	@Bean
+	@LoadBalanced
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 
+	// ✅ For WebClient (Load-balanced for Eureka)
+	@Bean
+	@LoadBalanced
+	public WebClient.Builder webClientBuilder() {
+		return WebClient.builder();
+	}
 
 }
